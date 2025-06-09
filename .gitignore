@@ -1,0 +1,18 @@
+# Go build
+bin/
+*.exe
+*.out
+*.test
+
+# DB files
+*.db
+
+# Environment files
+.env
+
+# IDE / OS files
+.vscode/
+.DS_Store
+
+# Vendor
+/vendor
