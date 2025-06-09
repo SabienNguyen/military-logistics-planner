@@ -1,0 +1,1 @@
+making a project to learn how to do golang with gorm and databases and things, military context seemed interesting
