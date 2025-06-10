@@ -63,6 +63,7 @@ func Init() *gorm.DB {
 		&models.SupplyRequest{},
 		&models.Zone{},
 		&models.Resource{},
+		&models.MovementLog{},
 	)
 	if err != nil {
 		log.Fatalf("auto migration failed: %v", err)

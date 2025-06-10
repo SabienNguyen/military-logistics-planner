@@ -21,4 +21,16 @@ func RegisterResourceRoutes(r *gin.Engine, db *gorm.DB) {
 		}
 		c.JSON(http.StatusCreated, resource)
 	})
+	r.GET("/zones/:id/resources", func(c *gin.Context) {
+		zoneID := c.Param("id")
+
+		var resources []models.Resource
+		if err := db.Where("zone_id = ?", zoneID).Find(&resources).Error; err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "failed to fetch resources"})
+			return
+		}
+
+		c.JSON(http.StatusOK, resources)
+	})
+
 }

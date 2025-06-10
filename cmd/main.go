@@ -15,7 +15,9 @@ func main() {
 
 	// 🧩 Register your routes, passing in the DB connection
 	handlers.RegisterZoneRoutes(r, database)
+	handlers.RegisterAssignmentRoutes(r, database)
 	handlers.RegisterResourceRoutes(r, database)
+	handlers.RegisterLogRoutes(r, database)
 
 	// 🚀 Run the server
 	r.Run(":8080")
