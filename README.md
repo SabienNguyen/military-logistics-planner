@@ -1,6 +1,6 @@
 # 🪖 Military Logistics Planner
 
-## � Goal
+## 🎯 Goal
 The Military Logistics Planner is a backend system built in Go to manage and track military resources (troops, vehicles), their assignments to operational zones, and historical movement logs. The system is designed with production-quality architecture to simulate the core features of military-grade planning platforms like Palantir's defense tools.
 
 Its primary goal is to provide secure, auditable, and role-based command infrastructure for assigning, viewing, and analyzing resource deployment in real time.
