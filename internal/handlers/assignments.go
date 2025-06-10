@@ -3,6 +3,7 @@ package handlers
 import (
 	"net/http"
 
+	"github.com/SabienNguyen/military-logistics-planner/internal/auth"
 	"github.com/SabienNguyen/military-logistics-planner/internal/models"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -15,7 +16,7 @@ type AssignRequest struct {
 }
 
 func RegisterAssignmentRoutes(r *gin.Engine, db *gorm.DB) {
-	r.POST("/assign", func(c *gin.Context) {
+	r.POST("/assign", auth.RequireRole("officer", "admin"), func(c *gin.Context) {
 		var req AssignRequest
 		if err := c.ShouldBindJSON(&req); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
