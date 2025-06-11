@@ -24,7 +24,7 @@ Its primary goal is to provide secure, auditable, and role-based command infrast
 - ✅ **Role-Based Access Control**: Secure endpoints by user role
 - ✅ **Registering Users**: Register and login users
 - ✅ **Mission Planning**: Assign resources to active missions
-- 🔜 **CI/CD Pipeline**: Automate tests and builds via GitHub Actions
+- ✅ **CI/CD Pipeline**: Automate tests and builds via GitHub Actions
 
 ## 🔐 User Roles (Planned Examples)
 | Role    | Capabilities                              |
