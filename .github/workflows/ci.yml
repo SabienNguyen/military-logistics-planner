@@ -32,8 +32,11 @@ jobs:
       - name: Install dependencies
         run: go mod download
 
+      - name: List project files
+        run: ls -R
+
       - name: Run tests
         run: go test ./... -v
 
       - name: Build binary
-        run: go build -v -o bin/military-logistics
+        run: go build -v -o bin/military-logistics ./cmd
