@@ -21,7 +21,7 @@ Its primary goal is to provide secure, auditable, and role-based command infrast
 - ✅ **Resource Tracking**: Add troops/vehicles, assign to zones
 - ✅ **Assignments**: Move resources between zones with logging
 - ✅ **Movement Logs**: Audit who moved where, when, and why
-- 🔜 **Role-Based Access Control**: Secure endpoints by user role
+- ✅ **Role-Based Access Control**: Secure endpoints by user role
 - 🔜 **CI/CD Pipeline**: Automate tests and builds via GitHub Actions
 - 🔜 **Mission Planning**: Assign resources to active missions
 
@@ -40,3 +40,4 @@ Its primary goal is to provide secure, auditable, and role-based command infrast
   - Assignments
   - Logs
 - API is testable locally with curl or Postman
+- Routes have specific role authorizations
