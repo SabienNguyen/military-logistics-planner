@@ -23,8 +23,8 @@ Its primary goal is to provide secure, auditable, and role-based command infrast
 - ✅ **Movement Logs**: Audit who moved where, when, and why
 - ✅ **Role-Based Access Control**: Secure endpoints by user role
 - ✅ **Registering Users**: Register and login users
+- ✅ **Mission Planning**: Assign resources to active missions
 - 🔜 **CI/CD Pipeline**: Automate tests and builds via GitHub Actions
-- 🔜 **Mission Planning**: Assign resources to active missions
 
 ## 🔐 User Roles (Planned Examples)
 | Role    | Capabilities                              |
@@ -43,3 +43,4 @@ Its primary goal is to provide secure, auditable, and role-based command infrast
 - API is testable locally with curl or Postman
 - Routes have specific role authorizations
 - Can register and login users
+- Can handle making, deleting, and editing missions

@@ -24,6 +24,7 @@ func main() {
 	handlers.RegisterResourceRoutes(r, database)
 	handlers.RegisterLogRoutes(r, database)
 	handlers.RegisterAuthRoutes(r, database, jwtSecret)
+	handlers.RegisterMissionRoutes(r, database)
 
 	// 🚀 Run the server
 	r.Run(":8080")

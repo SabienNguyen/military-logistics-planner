@@ -1,16 +1,15 @@
+// models/mission.go
 package models
 
-import "time"
+import (
+	"time"
+)
 
 type Mission struct {
-	ID          uint `gorm:"primaryKey"`
+	ID          string `gorm:"primaryKey"`
 	Name        string
 	Description string
 	StartDate   time.Time
 	EndDate     time.Time
-	Location    string
-	UnitID      uint
 	Status      string
-	CreatedAt   time.Time
-	UpdatedAt   time.Time
 }

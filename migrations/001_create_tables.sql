@@ -19,3 +19,4 @@ CREATE TABLE IF NOT EXISTS assignments (
     to_zone INTEGER,
     created_at TIMESTAMP DEFAULT now()
 );
+
