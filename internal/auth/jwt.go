@@ -17,7 +17,7 @@ type Claims struct {
 }
 
 // GenerateToken creates a JWT for a user
-func GenerateToken(userID uint, role string) (string, error) {
+func GenerateToken(userID uint, role string, secret []byte) (string, error) {
 	claims := Claims{
 		UserID: userID,
 		Role:   role,
@@ -27,11 +27,7 @@ func GenerateToken(userID uint, role string) (string, error) {
 	}
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
-	signedToken, err := token.SignedString(jwtSecret)
-	if err != nil {
-		return "", errors.New("failed to sign token: " + err.Error())
-	}
-	return signedToken, nil
+	return token.SignedString(secret)
 }
 
 // ParseToken validates the JWT and extracts claims

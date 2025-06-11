@@ -22,6 +22,7 @@ Its primary goal is to provide secure, auditable, and role-based command infrast
 - ✅ **Assignments**: Move resources between zones with logging
 - ✅ **Movement Logs**: Audit who moved where, when, and why
 - ✅ **Role-Based Access Control**: Secure endpoints by user role
+- 🔜 **Registering Users**: Register and login users
 - 🔜 **CI/CD Pipeline**: Automate tests and builds via GitHub Actions
 - 🔜 **Mission Planning**: Assign resources to active missions
 
