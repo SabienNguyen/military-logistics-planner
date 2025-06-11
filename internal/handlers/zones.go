@@ -3,6 +3,7 @@ package handlers
 import (
 	"net/http"
 
+	"github.com/SabienNguyen/military-logistics-planner/internal/auth"
 	"github.com/SabienNguyen/military-logistics-planner/internal/models"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -10,7 +11,7 @@ import (
 
 // RegisterZoneRoutes sets up the /zones endpoints
 func RegisterZoneRoutes(r *gin.Engine, db *gorm.DB) {
-	r.POST("/zones", func(c *gin.Context) {
+	r.POST("/zones", auth.RequireRole("admin"), func(c *gin.Context) {
 		var zone models.Zone
 		if err := c.ShouldBindJSON(&zone); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})

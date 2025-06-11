@@ -3,13 +3,14 @@ package handlers
 import (
 	"net/http"
 
+	"github.com/SabienNguyen/military-logistics-planner/internal/auth"
 	"github.com/SabienNguyen/military-logistics-planner/internal/models"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
 
 func RegisterResourceRoutes(r *gin.Engine, db *gorm.DB) {
-	r.POST("/resources", func(c *gin.Context) {
+	r.POST("/resources", auth.RequireRole("admin", "officer"), func(c *gin.Context) {
 		var resource models.Resource
 		if err := c.ShouldBindJSON(&resource); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
@@ -21,7 +22,7 @@ func RegisterResourceRoutes(r *gin.Engine, db *gorm.DB) {
 		}
 		c.JSON(http.StatusCreated, resource)
 	})
-	r.GET("/zones/:id/resources", func(c *gin.Context) {
+	r.GET("/zones/:id/resources", auth.RequireRole("viewer", "officer", "admin"), func(c *gin.Context) {
 		zoneID := c.Param("id")
 
 		var resources []models.Resource
