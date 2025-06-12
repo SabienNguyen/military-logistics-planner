@@ -14,7 +14,7 @@ Its primary goal is to provide secure, auditable, and role-based command infrast
 | Database            | PostgreSQL (via Docker) or SQLite         |
 | Auth                | JWT-based authentication with roles       |
 | Deployment          | Docker & Docker Compose (optional)        |
-| CI/CD               | GitHub Actions (planned)                  |
+| CI/CD               | GitHub Actions                            |
 
 ## 📁 Core Features
 - ✅ **Zone Management**: Create and view operational zones
